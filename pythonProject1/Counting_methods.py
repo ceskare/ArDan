@@ -84,3 +84,7 @@ n = 100
 chebyshev_points_60 = chebyshev_points(a, b, n)
 print('\n\n\n')
 print(*chebyshev_points_60, sep='\n')
+
+
+
+

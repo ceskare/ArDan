@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test_app',
+    'orders',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -86,7 +88,25 @@ DATABASES = {
         'PASSWORD': '1',
         'HOST': 'localhost',
         'PORT': 5432
-    }
+    },
+
+    # 'orders': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'orders',
+    #     'USER': 'postgres',
+    #     'PASSWORD': '1',
+    #     'HOST': 'localhost',
+    #     'PORT': 5432
+    # },
+    #
+    # 'products': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'products',
+    #     'USER': 'postgres',
+    #     'PASSWORD': '1',
+    #     'HOST': 'localhost',
+    #     'PORT': 5432
+    # }
 }
 
 
