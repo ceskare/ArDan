@@ -1,0 +1,86 @@
+{% extends 'test_app/body.html' %}
+
+<!--{% block button %}-->
+<!--<head>-->
+<!--    <style>-->
+
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<h2>Интернет магазин</h2>-->
+
+<!--<button id="buyBtn">Купить</button>-->
+
+<!--<div id="buyPopup" class="popup">-->
+<!--    <div class="popup-content">-->
+<!--        <span class="close">×</span>-->
+<!--        <form action="/submit_purchase">-->
+<!--            <label for="name">Имя:</label><br>-->
+<!--            <input type="text" id="name" name="name"><br>-->
+<!--            <label for="phone">Телефон:</label><br>-->
+<!--            <input type="text" id="phone" name="phone"><br>-->
+<!--            <input type="submit" value="Подтвердить">-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    // Получаем элементы-->
+<!--    var popup = document.getElementById("buyPopup");-->
+<!--    var btn = document.getElementById("buyBtn");-->
+<!--    var span = document.getElementsByClassName("close")[0];-->
+
+<!--    // Открываем всплывающее окно при нажатии на кнопку-->
+<!--    btn.onclick = function() {-->
+<!--      popup.style.display = "block";-->
+<!--    }-->
+
+<!--    // Закрываем всплывающее окно при нажатии на "x"-->
+<!--    span.onclick = function() {-->
+<!--      popup.style.display = "none";-->
+<!--    }-->
+
+<!--    // Закрываем всплывающее окно при нажатии вне его области-->
+<!--    window.onclick = function(event) {-->
+<!--      if (event.target == popup) {-->
+<!--        popup.style.display = "none";-->
+<!--      }-->
+<!--    }-->
+<!--</script>-->
+
+<!--</body>-->
+<!--{% endblock %}-->
+{% block content %}
+
+
+<form method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Phone number</label>
+    <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Phone number">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<!--<h1>{{title}}</h1>-->
+
+<!--<form method="POST">-->
+<!--  {% csrf_token %}-->
+<!--  {{ form.as_p }}-->
+<!--    <button type="submit">Заказать звонок</button>-->
+<!--&lt;!&ndash;  <input type="submit" value="Submit">&ndash;&gt;-->
+<!--</form>-->
+<!--<form action="{% url 'add_user' %}" method="post">-->
+<!--  {% csrf_token %}-->
+<!--  {{ form.as_p }}-->
+<!--  <button type="submit">Заказать звонок</button>-->
+<!--</form>-->
+
+{% endblock %}
